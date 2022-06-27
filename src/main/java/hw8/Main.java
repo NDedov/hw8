@@ -1,6 +1,7 @@
 package hw8;
 
 import java.util.Arrays;
+import java.util.Calendar;
 import java.util.LinkedList;
 
 class Item{
@@ -20,7 +21,7 @@ class Item{
     }
 }
 
-class HashTable{
+class HashTable {
     private final LinkedList<Item>[] hashArr;
     private final int arrSize;
 
@@ -36,6 +37,9 @@ class HashTable{
         for(int i=0;i<arrSize;i++)
             System.out.printf("%s ", Arrays.toString(hashArr[i].toArray()));
         System.out.println();
+
+        Integer z;
+
     }
 
     public int hashFunc(int key){
@@ -106,6 +110,23 @@ public class Main {
 
         System.out.println(hashTable.find(70));
         System.out.println(hashTable.find(125));
+
+        String[] arr1 = {"1","2","3"};
+        String[] arr2 = {"4","5","6"};
+        System.out.println(Arrays.toString(arr1));
+        System.out.println(Arrays.toString(arr2));
+        swapPlaces(arr1, arr2, 0);
+        System.out.println(Arrays.toString(arr1));
+        System.out.println(Arrays.toString(arr2));
+
+
+
+    }
+    public static <T> void swapPlaces(T[] arr1, T[] arr2, int number){
+        T element = arr1[number];
+        arr1[number] = arr2[number];
+        arr2[number] = element;
     }
 }
+
 
