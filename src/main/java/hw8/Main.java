@@ -37,9 +37,6 @@ class HashTable {
         for(int i=0;i<arrSize;i++)
             System.out.printf("%s ", Arrays.toString(hashArr[i].toArray()));
         System.out.println();
-
-        Integer z;
-
     }
 
     public int hashFunc(int key){
